@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+nav {
+    background-color: #2d3e50;
+    padding: 6px 0;
+    text-align: center;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+ul.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content:flex-start;
+    flex-grow: 1;
+}
+
+ul.menu li {
+    margin: 0 20px;
+}
+
+ul.menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+ul.menu li a:hover {
+    background-color: #1e2a37;
+    border-radius: 5px;
+    color: #ffcb2f;
+}
+
+ul.menu li a:active {
+    transform: scale(0.98);
+}
+
+
+.auth-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.auth-btn {
+    text-decoration: none;
+    color: white;
+    background-color: #ffcb2f;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.auth-btn:hover {
+    background-color: #1e2a37;
+    color: #ffcb2f;
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        padding: 10px 20px;
+    }
+
+    ul.menu {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    ul.menu li {
+        margin: 10px 0;
+    }
+
+    ul.menu li a {
+        font-size: 16px;
+    }
+
+    .auth-buttons {
+        display:none; /
+    }
+    ul.menu {
+        justify-content: center;
+    }
+
+
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+    }
+
+    .menu.open {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    ul.menu li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        padding: 10px 0;
+    }
+
+    .menu-items {
+        grid-template-rows: 1fr;
+    }
+
+    .menu-item {
+        width: 90%;
+    }
+
+    .see-menu-btn {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+
+/* Menu Section */
+.menu-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.menu-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.menu-item {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: scale(1.05); /* Added hover scale effect */
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.menu-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.menu-item .price {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Footer Section */
+footer {
+    background-color: #2d3e50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* See Menu Button */
+.see-menu-btn {
+    display: inline-block;
+    background-color: rgb(255, 0, 149);
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.see-menu-btn:hover {
+    background-color: rgb(255, 0, 0);
+    transform: translateY(-5px);
+}
+
+.see-menu-btn:active {
+    background-color: rgb(170, 1, 1);
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  
+    .menu-item {
+        width: 90%;
+    }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authorization Form</title>
+    <link rel="stylesheet" href="autorization.css">
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="servise.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <a href="autorization.html" class="auth-btn">Login</a>
+            <a href="registration.html" class="auth-btn">Register</a>
+        </div>
+    </nav>
+    <div class="form-container">
+        <h2>Authorization Form</h2>
+        <form id="auth-form" action="/submit" method="POST" onsubmit="return validateForm(event)">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required placeholder="Enter your username">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+            </div>
+            <div class="input-group">
+                <label for="remember">Remember me</label>
+                <input type="checkbox" id="remember" name="remember">
+            </div>
+            <button type="submit" class="submit-btn">Log in</button>
+        </form>
+        <div id="error-message" class="error-message"></div>
+    </div>
+</body>
+</html>
