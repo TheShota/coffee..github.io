@@ -30,7 +30,7 @@
         <input type="radio" name="slide" id="slide4">
         <div class="slides">
             <div class="slide" id="s1">
-                <img src="images/unk1.jpg.webp" alt="Slide 1">
+                <img src="/unk1.jpg.webp" alt="Slide 1">
             </div>
             <div class="slide" id="s2">
                 <img src="images/unk3.jpg" alt="Slide 2">
